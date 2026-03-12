@@ -34,4 +34,4 @@ if __name__ == "__main__":
         print(f"Trial {i + 1} done")
 
     average_time = total_time / num_trials
-    print(f"{size} numbers sorted in {average_time:.4f} seconds")
+    print(f"{size} numbers sorted in {average_time:.5f} seconds")

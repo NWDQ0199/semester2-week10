@@ -7,7 +7,7 @@ and profiling.
 
 `task2`: Benchmarking of sorting algorithms implemented in Python & C
 
-`task3`: Using Matplotlib to plot real and theoretical program performance
+`task3`: Plotting benchmarks using Pandas, Seaborn and Matplotlib
 
 `task4`: Using compiler optimization options
 

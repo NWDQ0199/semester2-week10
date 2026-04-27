@@ -1,0 +1,5 @@
+time ./multiply
+
+real    0m5.075s
+user    0m4.498s
+sys     0m0.015s

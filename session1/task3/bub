@@ -1,0 +1,1 @@
+cd ../task2; echo Python; python bubblesort.py $1; echo C; ./bubblesort $1;

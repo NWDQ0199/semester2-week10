@@ -31,3 +31,4 @@ def quadratic_regression(data, column):
 if __name__ == "__main__":
     data = pd.read_csv("bubblesort.csv")
     # call functions here
+    plot(data)

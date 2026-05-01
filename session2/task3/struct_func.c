@@ -5,7 +5,8 @@
 /*
  * structure definition
  */
-typedef struct _functions {
+typedef struct _functions
+{
     int (*operations[3])(int,int);   // function pointer
     char symbols[3];                 // function symbol
 } Functions;
@@ -21,7 +22,8 @@ Functions *setFunctions( void );
 /*
  * populate the struct with function pointers
  */
-Functions *setFunctions( void ) {
+Functions *setFunctions( void )
+{
     Functions *functions = malloc(sizeof(Functions));
     functions->operations[0] = add;
     functions->symbols[0] = '+';
@@ -36,15 +38,18 @@ Functions *setFunctions( void ) {
  * integer operation implementations
  */
 
-int add( int i, int j ) {
+int add( int i, int j )
+{
     return i+j;
 }
 
-int subtract( int i, int j ) {
+int subtract( int i, int j )
+{
     return i-j;
 }
 
-int multiply( int i, int j ) {
+int multiply( int i, int j )
+{
     return i*j;
 }
 
@@ -59,6 +64,10 @@ int main( void ) {
 
     // write code to loop through the 3 functions and print an appropriate sum for each, eg. "2 + 3 = 5"
     // use the structure symbol and function-pointer data rather than hard-coding values
+    for(int i=0;i<3;i++)
+    {
+        printf("%i%c%i=%i\n",num1,myFunctions->symbols[i],num2,(*(myFunctions->operations[i]))(num1,num2));
+    }
 
     free(myFunctions);
     return 0;

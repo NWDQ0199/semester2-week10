@@ -9,7 +9,8 @@ typedef struct _functions
 {
     int (*operations[3])(int,int);   // function pointer
     char symbols[3];                 // function symbol
-} Functions;
+}
+Functions;
 
 /*
  * function headers

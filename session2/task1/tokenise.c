@@ -6,6 +6,7 @@ int main( void )
 {
 
     char buffer[100] = "the quick brown fox jumped over the lazy dog";
+    const int bufLen=100;
 
     char *argv[10];  // argv is an array of 10 char* pointers
     int argc=0;    // argc max is 10
@@ -37,9 +38,13 @@ int main( void )
             argc++;
             break;
         }
-        if(buffer[i]==' ')
+        if(buffer[i]==' '||i==bufLen-1)
         {
-            end=i;
+            end=i-1;
+            if(i==bufLen-1)
+            {
+                end=i;
+            }
             int length=end-start+1;
             argv[argc]=NULL;
             char* p=malloc((length+1)*sizeof(char));
